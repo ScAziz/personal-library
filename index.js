@@ -6,6 +6,7 @@ class Book {
         return this;
     }
 }
+
 // UI class: UI functions and helpers
 class UI {
     static loadBooks(storedBooks) {
@@ -33,7 +34,13 @@ class UI {
 
         container.appendChild(newDiv);
     }
+
+    static displayModal() {
+        const scrim = document.querySelector('.scrim');
+        scrim.classList.add('toggleDisplay');
+    }
 }
+
 // Data Storage class: handles storing and getting books
 const exampleBooks = [
     {
@@ -47,5 +54,7 @@ const exampleBooks = [
 ]
 
 // Events
-
 window.addEventListener('load', UI.loadBooks(exampleBooks));
+
+const fab = document.querySelector('.fab');
+fab.addEventListener('click', UI.displayModal);
