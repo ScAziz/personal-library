@@ -39,6 +39,11 @@ class UI {
         const scrim = document.querySelector('.scrim');
         scrim.classList.add('toggleDisplay');
     }
+
+    static hideModal() {
+        const scrim = document.querySelector('.scrim');
+        scrim.classList.remove('toggleDisplay')
+    }
 }
 
 // Data Storage class: handles storing and getting books
@@ -56,5 +61,10 @@ const exampleBooks = [
 // Events
 window.addEventListener('load', UI.loadBooks(exampleBooks));
 
-const fab = document.querySelector('.fab');
-fab.addEventListener('click', UI.displayModal);
+const modalBtn = document.querySelector('.fab');
+modalBtn.addEventListener('click', UI.displayModal);
+
+const scrim = document.querySelector('.scrim');
+scrim.addEventListener('click', (event) => {
+    if(event.target === scrim) UI.hideModal();
+})

@@ -12,8 +12,8 @@ header {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14),
-              0 3px 14px 2px rgba(0, 0, 0, .12),
-              0 5px 5px -3px rgba(0, 0, 0, .4);
+        0 3px 14px 2px rgba(0, 0, 0, .12),
+        0 5px 5px -3px rgba(0, 0, 0, .4);
 }
 
 header h1 {
@@ -33,8 +33,8 @@ header h1 {
     text-align: center;
     border-radius: 1em;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14),
-              0 1px 5px 0 rgba(0, 0, 0, .12),
-              0 3px 1px -2px rgba(0, 0, 0, .2);
+        0 1px 5px 0 rgba(0, 0, 0, .12),
+        0 3px 1px -2px rgba(0, 0, 0, .2);
 }
 
 .fab {
@@ -51,19 +51,19 @@ header h1 {
     background-color: purple;
     color: white;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14),
-              0 1px 10px 0 rgba(0, 0, 0, .12),
-              0 2px 4px -1px rgba(0, 0, 0, .4);
+        0 1px 10px 0 rgba(0, 0, 0, .12),
+        0 2px 4px -1px rgba(0, 0, 0, .4);
 }
 
 .fab:hover {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3em;
+    height: 3em;
     box-shadow: 1rem 0.25rem 2.5rem 1rem rgba(0, 0, 0, 0.226);
 }
 
 .fab:active {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3em;
+    height: 3em;
     background-color: rgb(148, 65, 148);
     box-shadow: 1rem 0.25rem 2.5rem 1rem rgba(0, 0, 0, 0.226);
     outline: none;
@@ -77,13 +77,59 @@ header h1 {
     display: none;
     position: absolute;
     top: 0;
+    left: 0;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     z-index: 12;
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(0.2rem);
 }
 
-.toggleDisplay{
+.toggleDisplay {
     display: block;
+}
+
+.book-form {
+    width: 20em;
+    height: 25em;
+    padding: 2.5em;
+    margin: 5em auto;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.226);
+    background-color: white;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
+.submit-btn {
+    display: block;
+    width: 2em;
+    height: 2em;
+    font-size: 1.5rem;
+    color: white;
+    background-color: purple;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0.75rem 0.25rem 1.5rem 0.5rem rgba(0, 0, 0, 0.226);
+}
+
+.submit-btn:hover {
+    width: 3em;
+    height: 3em;
+    box-shadow: 1rem 0.25rem 2.5rem 1rem rgba(0, 0, 0, 0.226);
+}
+
+.submit-btn:active {
+    width: 3em;
+    height: 3em;
+    background-color: rgb(148, 65, 148);
+    box-shadow: 1rem 0.25rem 2.5rem 1rem rgba(0, 0, 0, 0.226);
+    outline: none;
+}
+
+.form-item {
+    margin: 2.5rem auto;
 }
