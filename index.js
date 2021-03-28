@@ -55,7 +55,7 @@ const exampleBooks = [
     {
         author: "test",
         title: "test"
-    }
+    },
 ]
 
 // Events
@@ -67,4 +67,16 @@ modalBtn.addEventListener('click', UI.displayModal);
 const scrim = document.querySelector('.scrim');
 scrim.addEventListener('click', (event) => {
     if(event.target === scrim) UI.hideModal();
+})
+
+const submit = document.querySelector('.submit-btn');
+submit.addEventListener('click', (event) => {
+    event.preventDefault();
+    const author = document.getElementById('author');
+    const title = document.getElementById('title');
+    const newBook = new Book(author.value, title.value);
+    author.value = '';
+    title.value = '';
+    UI.createBookTile(newBook);
+    UI.hideModal();
 })
