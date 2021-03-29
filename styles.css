@@ -134,6 +134,39 @@ input[type=text] {
     margin: 2.5rem auto;
 }
 
+.delete {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    font-weight: bold;
+    
+    border: none;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14),
+        0 1px 10px 0 rgba(0, 0, 0, .12),
+        0 2px 4px -1px rgba(0, 0, 0, .4);
+}
+
+.delete:hover {
+    width: 1.75em;
+    height: 1.75em;
+    box-shadow: 1rem 0.25rem 2.5rem 1rem rgba(0, 0, 0, 0.226);
+}
+
+.delete:active {
+    width: 1.75em;
+    height: 1.75em;
+    background-color: whitesmoke;
+    box-shadow: 1rem 0.25rem 2.5rem 1rem rgba(0, 0, 0, 0.226);
+    outline: none;
+}
+
+.delete:focus {
+    outline: none;
+}
+
 /* toggle */
 
 /* .switch {

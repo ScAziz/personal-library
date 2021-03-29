@@ -32,6 +32,11 @@ class UI {
         newDiv.appendChild(authorHead);
         newDiv.appendChild(author);
 
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '-';
+        deleteButton.classList.add('delete');
+        newDiv.appendChild(deleteButton);
+
         // const toggleLabel = document.createElement('label');
         // toggleLabel.classList.add('switch');
         // const checkBox = document.createElement('input');
