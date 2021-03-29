@@ -136,7 +136,7 @@ input[type=text] {
 
 /* toggle */
 
-.switch {
+/* .switch {
     position: relative;
     display: inline-block;
     width: 2.75em;
@@ -187,4 +187,4 @@ input[type=text] {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
+  } */
