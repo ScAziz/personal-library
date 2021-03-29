@@ -110,12 +110,19 @@ submit.addEventListener('click', (event) => {
 const deleteBtns = document.querySelectorAll('.delete');
 deleteBtns.forEach(button => {
     button.addEventListener('click', (event) => {
-        const searchTerm = event.target.parentElement.firstChild.nextSibling;
         event.target.parentElement.remove();
+        const books = Store.getBooks();
+        books.forEach((book, index) => {
+          if(book.title === event.target.parentElement.firstChild.nextSibling.textContent) {
+            books.splice(index, 1);
+          } 
+          localStorage.setItem('books', JSON.stringify(books));
+        }) 
+    }) 
+}); 
         
-    })
-    
-})
+
+        
 
 
 
