@@ -107,5 +107,15 @@ submit.addEventListener('click', (event) => {
     
 })
 
+const deleteBtns = document.querySelectorAll('.delete');
+deleteBtns.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const searchTerm = event.target.parentElement.firstChild.nextSibling;
+        event.target.parentElement.remove();
+        
+    })
+    
+})
+
 
 
