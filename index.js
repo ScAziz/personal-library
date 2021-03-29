@@ -3,6 +3,7 @@ class Book {
     constructor(author, title) {
         this.author = author;
         this.title = title;
+        this.read = false;
         return this;
     }
 }
@@ -41,6 +42,7 @@ class UI {
         toggleLabel.appendChild(checkBox);
         toggleLabel.appendChild(slider);
         newDiv.appendChild(toggleLabel);
+        checkBox.id = book.author;
 
 
         container.appendChild(newDiv);
@@ -58,19 +60,26 @@ class UI {
 }
 
 // Data Storage class: handles storing and getting books
-const exampleBooks = [
-    {
-        author: "example",
-        title: "example"
-    },
-    {
-        author: "test",
-        title: "test"
-    },
-]
+class Store {
+    static getBooks() {
+        let books;
+        if(localStorage.getItem('books') === null) {
+            books = [];
+        } else {
+            books = JSON.parse(localStorage.getItem('books'));
+        }
+        return books;
+    }
+
+    static addBook(book) {
+        const books = Store.getBooks();
+        books.push(book);
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+}
 
 // Events
-window.addEventListener('load', UI.loadBooks(exampleBooks));
+window.addEventListener('load', UI.loadBooks(Store.getBooks()));
 
 const modalBtn = document.querySelector('.fab');
 modalBtn.addEventListener('click', UI.displayModal);
@@ -86,8 +95,12 @@ submit.addEventListener('click', (event) => {
     const author = document.getElementById('author');
     const title = document.getElementById('title');
     const newBook = new Book(author.value, title.value);
-    author.value = '';
-    title.value = '';
     UI.createBookTile(newBook);
     UI.hideModal();
+    Store.addBook(newBook);
+    author.value = '';
+    title.value = '';
+    
 })
+
+
