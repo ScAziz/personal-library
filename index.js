@@ -32,6 +32,17 @@ class UI {
         newDiv.appendChild(authorHead);
         newDiv.appendChild(author);
 
+        const toggleLabel = document.createElement('label');
+        toggleLabel.classList.add('switch');
+        const checkBox = document.createElement('input');
+        checkBox.setAttribute('type', 'checkbox');
+        const slider = document.createElement('span');
+        slider.classList.add('slider');
+        toggleLabel.appendChild(checkBox);
+        toggleLabel.appendChild(slider);
+        newDiv.appendChild(toggleLabel);
+
+
         container.appendChild(newDiv);
     }
 
