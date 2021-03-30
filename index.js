@@ -1,4 +1,3 @@
-// Book Class: represets a book
 class Book {
     constructor(author, title) {
         this.author = author;
@@ -36,18 +35,6 @@ class UI {
         deleteButton.textContent = '-';
         deleteButton.classList.add('delete');
         newDiv.appendChild(deleteButton);
-
-        // const toggleLabel = document.createElement('label');
-        // toggleLabel.classList.add('switch');
-        // const checkBox = document.createElement('input');
-        // checkBox.setAttribute('type', 'checkbox');
-        // const slider = document.createElement('span');
-        // slider.classList.add('slider');
-        // toggleLabel.appendChild(checkBox);
-        // toggleLabel.appendChild(slider);
-        // newDiv.appendChild(toggleLabel);
-        
-
 
         container.appendChild(newDiv);
     }
